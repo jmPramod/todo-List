@@ -291,6 +291,10 @@ button{
   border: none;
   cursor: pointer;
 }
+
+input{
+  width: 90%;
+}
 .first>form{
 
   width: 100%;
@@ -333,6 +337,10 @@ margin-left: 0;
   }
   input{
     width: 70%;
+  }
+  .allList>li>input{
+    font-weight: 500;
+    font-size: 15px;
   }
   
 }
