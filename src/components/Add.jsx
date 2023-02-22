@@ -37,22 +37,21 @@ const Add = ({ title, setTitle, list, setList, edittodo, setEdittodo }) => {
     }
   }, [setTitle, edittodo]);
 
+
+
+
+
   const handleClear=()=>{
-    const newUpdate1 = list.filter((v) =>
-    {
-      let {id}=v
-     if(v.completed==true){
-      setList(list.filter((q) => q.id !== id));
-     }
+    for( var i = 0; i < list.length; i++){ 
+    
      
-    }
-  )
+      var filtered = list.filter(function(value, index, arr){ 
+        return value.completed ===false;
+    });
   
-  
-  
-  
+    setList(filtered)
   }
-  
+}
   return (
     <div className="first">
       <form action="" onSubmit={onSubmit}>
