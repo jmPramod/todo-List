@@ -5,7 +5,8 @@
   text-transform: capitalize;
 }
 .remove{
-  width: 31%;
+  width: 12%;
+
 }
 .allList>li>input{
   font-weight: 500;
@@ -261,9 +262,11 @@ width: 80%;
 
 .checkedtrue
 {
+  display: flex;
   text-decoration: line-through;
 }
 .checkedfalse{
+  display: flexboxcheckedtrue;
   text-decoration: none;
 }
 
