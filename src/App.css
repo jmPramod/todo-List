@@ -234,6 +234,7 @@ width: 80%;
 
 @media screen and (max-width: 1000px){
  
+  
  
 .bothItem{
   /* border: 1px solid red; */
@@ -299,11 +300,11 @@ margin-left: 0;
   
   
 }
-.allList li{
+/* .allList li{
 
   list-style: none;
   display: flex;
-  /* border: 1px solid brown; */
+  
   display: flex;
   align-items: center;
   max-height: 50px;
@@ -313,6 +314,25 @@ margin-left: 0;
   border-radius: 10px;
   margin: 0 auto;
   background-color: antiquewhite;
+  } */
+  
+.allList >li{
+
+  list-style: none;
+  display: flex;
+  /* border: 1px solid brown; */
+  display: flex;
+  align-items: center;
+  max-height: 50px;
+  justify-content: center;
+  height: 50px;
+  width: 80%;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: antiquewhite;
+  }
+  input{
+    width: 70%;
   }
   
 }
