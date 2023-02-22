@@ -24,7 +24,10 @@ const Todo = ({ list, setList, setEdittodo }) => {
 
   return (
     <div className="allList">
-      {list.map((v, i) => (
+  {list.length<=0 && <h1 style={{textAlign:"center"}}>nothing to display</h1>}
+  
+  
+     {list.map((v, i) => (
         <>
           <li
             key={v.id}
