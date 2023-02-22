@@ -7,6 +7,10 @@
 .remove{
   width: 31%;
 }
+.allList>li>input{
+  font-weight: 500;
+  font-size: 25px;
+}
 .App{
   /* background-image: url("https://www.google.com/search?q=background+image+for+todo&rlz=1C1RLNS_enIN1040IN1040&sxsrf=AJOqlzXkltzEB5Snnb04N8E6G9RiyCXLjw:1677061329247&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiOiK-m9Kj9AhWxHrcAHS2-AcEQ_AUoAXoECAEQAw&biw=1366&bih=625&dpr=1#imgrc=ovS2UGQLspXDOM");
    */
@@ -128,7 +132,7 @@ margin-left: 80px;
 .first>form >input{
   padding: 10px;
   margin: 2px;
-  
+  width: 270px;
   border-radius: 20px;
   max-height: 100px;
   
