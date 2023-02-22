@@ -252,7 +252,7 @@ height: 50px;
 width: 80%;
 border-radius: 10px;
 margin: 0 auto;
-background-color: rgb(187, 157, 118);
+background-color: #61dafb;
 }
 
   input[type='checkbox'] { 
@@ -274,7 +274,7 @@ background-color: rgb(187, 157, 118);
 width: 80%;
   border-radius: 10px;
   margin: 0 auto;
-  background-color: rgb(255, 215, 164);
+  background-color:  #13c5f7;
    }
 
 /* .allList>li{
@@ -405,7 +405,7 @@ margin-left: 0;
   width: 80%;
   border-radius: 10px;
   margin: 0 auto;
-  background-color: antiquewhite;
+  background-color:  #13c5f7;
   }
   input{
     width: 70%;
