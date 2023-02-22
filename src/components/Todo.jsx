@@ -46,14 +46,17 @@ let handleComplete = (e) => {
            className={v.checked?"checkedtrue":"checkedfalse"}
           style={{marginBottom:"4px"}}
           >
+            <label class="container">
           <input
           style={{marginRight:"13px"}}
                 type="checkbox"
                 name=""
+                className="check"
                 id=""
                 onClick={() => handleComplete(v)}
               />
-             
+               <span class="checkmark"></span>
+             </label>
             <input
  style={{margin:"3px"}}
               type="text"
