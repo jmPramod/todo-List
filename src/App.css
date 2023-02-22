@@ -168,14 +168,16 @@ margin-top: 110px;
 
 .first>form{
 
-  width: 50%;
+  width: 100%;
 align-items: center;
-justify-content: space-between;
-margin-left: 80px;
-  
+justify-content: center;
+/* margin-left: 80px; */
+display: flex;  
   
 }
 .first>form >input{
+align-items: center;
+justify-content: center;
   padding: 10px;
   margin: 2px;
   width: 270px;
