@@ -1,35 +1,19 @@
 import React from "react";
 
-import { FaRegTrashAlt } from 'react-icons/fa';
+import { FaRegTrashAlt } from "react-icons/fa";
 const Todo = ({ list, setList, setEdittodo }) => {
-  //todo=list settodo=selist
   const handleDelete = ({ id }) => {
     setList(list.filter((v) => v.id !== id));
   };
 
   const handleEdit = ({ id }) => {
     const findList = list.find((v) => v.id === id);
-    // console.log("findList",findList);
+
     setEdittodo(findList);
   };
-
-//   let handleComplete = (e) => {
-    
-//     setList(
-//       list.map((v, i) => {
-        
-//         if (v.id === e.id) {
-//           return { ...v, completed: !v.completed };
-//         }
-//         return v;
-//       })
-//     );
-//   };
-let handleComplete = (e) => {
-    
+  let handleComplete = (e) => {
     setList(
       list.map((v, i) => {
-        
         if (v.id === e.id) {
           return { ...v, completed: !v.completed };
         }
@@ -42,34 +26,35 @@ let handleComplete = (e) => {
     <div className="allList">
       {list.map((v, i) => (
         <>
-          <li key={v.id} onDoubleClick={() => handleEdit(v)}
-           className={v.checked?"checkedtrue":"checkedfalse"}
-          style={{marginBottom:"4px"}}
+          <li
+            key={v.id}
+            onDoubleClick={() => handleEdit(v)}
+            className={v.checked ? "checkedtrue" : "checkedfalse"}
+            style={{ marginBottom: "4px" }}
           >
             <label class="container">
-          <input
-          style={{marginRight:"13px"}}
+              <input
+                style={{ marginRight: "13px" }}
                 type="checkbox"
                 name=""
                 className="check"
                 id=""
                 onClick={() => handleComplete(v)}
               />
-               <span class="checkmark"></span>
-             </label>
+              <span class="checkmark"></span>
+            </label>
             <input
- style={{margin:"3px"}}
+              style={{ margin: "3px" }}
               type="text"
               value={v.title}
               disabled
               onChange={(e) => e.preventDefault()}
-             
             />
 
             <div>
-              <button onClick={() => handleDelete(v)}><FaRegTrashAlt/></button>
-              {/* <button onClick={()=>handleEdit(v)}>edit</button> */}
-              {/* <button onClick={()=>handleComplete(v)}>completed</button> */}
+              <button onClick={() => handleDelete(v)}>
+                <FaRegTrashAlt />
+              </button>
             </div>
           </li>
         </>
