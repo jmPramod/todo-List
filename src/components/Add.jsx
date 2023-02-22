@@ -67,7 +67,7 @@ const Add = ({ title, setTitle, list, setList, edittodo, setEdittodo }) => {
         />
         <button type="submit">{edittodo ? "update" : "add"}</button>
         
-        {list.length>0?<button onClick={handleClear} className="remove">Remove Checked</button>:null}
+        {list.length>0?<button type="button" onClick={handleClear} className="remove">Remove Checked</button>:null}
       </form>
     </div>
   );
