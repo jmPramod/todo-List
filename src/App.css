@@ -344,3 +344,8 @@ margin-left: 0;
   }
   
 }
+@media screen and (max-width: 800px) {
+  body {
+     width:720px;
+  }
+}
