@@ -266,7 +266,7 @@ width: 80%;
   text-decoration: line-through;
 }
 .checkedfalse{
-  display: flexboxcheckedtrue;
+  display: flex;
   text-decoration: none;
 }
 
