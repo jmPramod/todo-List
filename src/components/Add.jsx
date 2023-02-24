@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { v4 as ID } from "uuid";
 
 const Add = ({ title, setTitle, list, setList, edittodo, setEdittodo }) => {
+ 
+ 
   const updatedList = (title, id, completed) => {
     const newUpdate = list.map((v) =>
       v.id === id ? { title, id, completed } : v
@@ -10,13 +12,15 @@ const Add = ({ title, setTitle, list, setList, edittodo, setEdittodo }) => {
     setEdittodo("");
   };
 
+
   let handleChange = (e) => {
     setTitle(e.target.value);
   };
 
+
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("edittodo",edittodo);
+    // console.log("edittodo",edittodo);
     if (!edittodo) {
       console.log("if");
       setList([...list, { id: ID(), title: title, completed: false }]);
@@ -28,8 +32,7 @@ const Add = ({ title, setTitle, list, setList, edittodo, setEdittodo }) => {
   };
 
   useEffect(() => {
-    // console.log("xxx",edittodo?.title,list)'
-
+   
     if (edittodo) {
       setTitle(edittodo.title);
     } else {
@@ -52,6 +55,8 @@ const Add = ({ title, setTitle, list, setList, edittodo, setEdittodo }) => {
     setList(filtered)
   }
 }
+
+
   return (
     <div className="first">
       <form action="" onSubmit={onSubmit}>

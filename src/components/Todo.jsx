@@ -11,6 +11,7 @@ const Todo = ({ list, setList, setEdittodo }) => {
 
     setEdittodo(findList);
   };
+
   let handleComplete = (e) => {
     setList(
       list.map((v, i) => {
@@ -21,7 +22,7 @@ const Todo = ({ list, setList, setEdittodo }) => {
       })
     );
   };
-
+console.log("list",list);
   return (
     <div className="allList">
   {list.length<=0 && <h1 style={{textAlign:"center", color:"red"}}>nothing to display!! please add the title</h1>}
@@ -32,30 +33,34 @@ const Todo = ({ list, setList, setEdittodo }) => {
           <li
             key={v.id}
             onDoubleClick={() => handleEdit(v)}
-            className={v.checked ? "checkedtrue" : "checkedfalse"}
-            style={{ marginBottom: "4px" }}
+            id= "checkedtrue"
+          
           >
             <label class="container">
               <input
-                style={{ marginRight: "13px" }}
+                
                 type="checkbox"
                 name=""
                 className="check"
+                checked={v.completed}
                 id=""
                 onClick={() => handleComplete(v)}
               />
               <span class="checkmark"></span>
             </label>
             <input
-              style={{ margin: "3px" }}
+              
               type="text"
               value={v.title}
               disabled
-              onChange={(e) => e.preventDefault()}
+              style={{margin: "3px",
+                textDecoration: v.completed  ? 'line-through' : 'none'
+              }}
+           
             />
 
             <div>
-              <button onClick={() => handleDelete(v)}>
+              <button onClick={() => handleDelete(v)} style={{width:"40px",height:"40px"}}> 
                 <FaRegTrashAlt />
               </button>
             </div>

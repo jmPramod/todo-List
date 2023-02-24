@@ -191,7 +191,7 @@ button{
   padding: 10px;
   margin: 2px;
   padding: 5px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   font-weight: 600;
   width: 80px;
   border-radius: 10px;
@@ -241,7 +241,7 @@ background-color: #61dafb;
 
    }
    .allList>li>input:nth-child(2){
-  outline: none;
+  /* outline: none; */
   background-color: none;
    }
 .allList>li:hover {
@@ -258,14 +258,20 @@ width: 80%;
   margin: 0 auto;
   background-color:  #13c5f7;
    }
-
-
-.checkedtrue
+#checkedtrue{
+  margin-bottom: 4px;
+}
+.check{
+margin-right: 13px;
+}
+#checkedtrue>input
 {
   display: flex;
+  
   text-decoration: line-through;
 }
-.checkedfalse{
+.checkedfalse>input{
+
   display: flex;
   text-decoration: none;
 }
@@ -318,7 +324,7 @@ button{
   font-size: 10px;
   width: 50px;
   border-radius: 10px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   border: none;
   cursor: pointer;
 }
