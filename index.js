@@ -21,7 +21,7 @@ app.put("/emp",empUpdate)
 const ConnectDataBase=()=>{
     try{
 mongoose.set("strictQuery",true)
-mongoose.connect(process.env.MONGO_URL,{useNewUrlParser:true,useUnifiedTopology:true})
+mongoose.connect("mongodb+srv://pramod:vr7pboCbV6MyMVss@cluster0.3xonr81.mongodb.net/?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true})
 console.log("connected to Atlas Data base!!!");
     }
     catch(err){
